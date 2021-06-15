@@ -1,0 +1,76 @@
+:root {
+  --font: 'Roboto', sans-serif;
+  --white: #ffffff;
+  --black: #363237;
+  --dark-brown: #73605B; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+  color: var(--black);
+  font-family: var(--font);
+
+}
+
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Tabs */
+
+#tabs {
+  display: flex;
+  max-width: 600px;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.tab {
+  color: var(--dark-brown);
+  padding: 1rem 2rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.active-tab {
+  color: var(--black);
+  font-weight: 550; 
+  border-bottom: 1px var(--black) solid;
+}
+
+/* Home Tab */
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 8px;
+  max-width: 400px;
+}
+
+.home-content h1 {
+  justify-self: flex-start;
+  font-weight: 100;
+  color: var(--black);
+  font-size: 34px;
+  line-height: 36px;
+  margin: 1rem 0;
+}
+
+
+.home-content p {
+  color: var(--dark-brown);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
