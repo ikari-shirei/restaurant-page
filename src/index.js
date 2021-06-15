@@ -1,2 +1,3 @@
-alert('This is an alert');
-console.log('This is a console.log');
+import tabEvents from './modules/page.js';
+import './style/style.css';
+tabEvents();
