@@ -1,5 +1,6 @@
 import { homeAdd, homeIsVisible } from './home';
 import { menuAdd, menuIsVisible } from './menu';
+import { contactAdd, contactIsVisible } from './contact';
 
 function tabEvents() {
   const content = document.querySelector('#content');
@@ -37,6 +38,9 @@ function tabEvents() {
   //menu tab content
   menuAdd(false);
 
+  //contact tab content
+  contactAdd(false);
+
   //home onclick
   home.addEventListener('click', (e) => {
     e.target.classList.add('active-tab');
@@ -46,6 +50,7 @@ function tabEvents() {
       contact.classList.remove('active-tab');
     }
 
+    contactIsVisible(false);
     menuIsVisible(false);
 
     if (e.target.classList.contains('active-tab')) homeIsVisible(true);
@@ -62,6 +67,7 @@ function tabEvents() {
     }
 
     homeIsVisible(false);
+    contactIsVisible(false);
 
     if (e.target.classList.contains('active-tab')) menuIsVisible(true);
     else return;
@@ -78,6 +84,9 @@ function tabEvents() {
 
     homeIsVisible(false);
     menuIsVisible(false);
+
+    if (e.target.classList.contains('active-tab')) contactIsVisible(true);
+    else return;
   });
 }
 
