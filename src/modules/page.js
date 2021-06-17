@@ -1,4 +1,5 @@
 import { homeAdd, homeIsVisible } from './home';
+import { menuAdd, menuIsVisible } from './menu';
 
 function tabEvents() {
   const content = document.querySelector('#content');
@@ -29,8 +30,12 @@ function tabEvents() {
 
   //default active tab
   home.classList.add('active-tab');
+
   //home tab content
   homeAdd();
+
+  //menu tab content
+  menuAdd(false);
 
   //home onclick
   home.addEventListener('click', (e) => {
@@ -40,6 +45,8 @@ function tabEvents() {
     } else if (contact.classList.contains('active-tab')) {
       contact.classList.remove('active-tab');
     }
+
+    menuIsVisible(false);
 
     if (e.target.classList.contains('active-tab')) homeIsVisible(true);
     else return;
@@ -55,6 +62,9 @@ function tabEvents() {
     }
 
     homeIsVisible(false);
+
+    if (e.target.classList.contains('active-tab')) menuIsVisible(true);
+    else return;
   });
 
   //contact onclick
@@ -67,6 +77,7 @@ function tabEvents() {
     }
 
     homeIsVisible(false);
+    menuIsVisible(false);
   });
 }
 
