@@ -147,9 +147,61 @@ body {
   margin: 1rem;
 }
 
+/* Contact section */
+
+#contactSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute; 
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%,-50%)
+}
+
+#contactSection h1 {
+  justify-self: flex-start;
+  font-weight: 100;
+  color: var(--black);
+  font-size: 34px;
+  line-height: 36px;
+  margin: 1rem 0;
+}
+
+#information {
+  margin: 1rem 0;
+}
+
+#information {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.contact-content {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.contact-content div:first-child {
+  width: 90px;
+  padding: 1rem 0 1rem 0;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.contact-content div:nth-child(2) {
+  padding: 1rem 0rem;
+  color: var(--black);
+}
+
 @media only screen and (min-width: 600px) {
   .menu-content {
     margin: 1rem;
   }
-  
 }
